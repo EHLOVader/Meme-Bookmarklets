@@ -1,0 +1,30 @@
+---
+import { createBookmarklet } from '../lib/maker.js';
+import { promises as fs } from 'fs';
+import { join } from 'path';
+
+const { src } = Astro.props;
+
+const loadBookmarklet = async () => {
+    const filePath = join( process.cwd(), 'src/bookmarklets/', `${src}.js`);
+    try {
+        const fileContent = await fs.readFile(filePath, 'utf-8');
+        return createBookmarklet(fileContent);
+    } catch (error) {
+        console.error('Error reading bookmarklet file:', error);
+        return '';
+    }
+};
+
+const href = await loadBookmarklet();
+
+
+
+---
+
+<a href={href}>
+    <slot />
+</a>
+
+
+
