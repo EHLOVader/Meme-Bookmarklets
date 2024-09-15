@@ -2,6 +2,9 @@
 
 //import Soyjak from '../bookmarklets/soyjak.jsx'
 import Bookmarklet from '../components/Bookmarklet.astro'
+
+//glob bookmarklets folder and create array of names
+const bookmarklets = ['soyjak', 'travolta', 'wonka'];
 ---
 
 <html lang="en">
@@ -30,6 +33,15 @@ import Bookmarklet from '../components/Bookmarklet.astro'
 			<ul>
 				<li>
 					<Bookmarklet src="soyjak">Soy Jak</Bookmarklet>
+				</li>
+				<li>
+					<Bookmarklet src="Travolta">Travolta WTF</Bookmarklet>
+				</li>
+				<li>
+					<Bookmarklet src="wonka">Condescending Wonka</Bookmarklet>
+				</li>
+				<li>
+					<Bookmarklet src="drakeNo">Drake No</Bookmarklet>
 				</li>
 		</section>
 	</body>
