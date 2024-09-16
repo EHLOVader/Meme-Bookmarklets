@@ -2,9 +2,22 @@ const memeSpec = {
     id: "waitIsItAll",
     elements: [
         {
-            element: "img",
+          element: "div",
             attributes: {
                 "id": "waitIsItAll",
+                "style": {
+                    "position": "fixed",
+                    "right": "0",
+                    "bottom": "0",
+                    "zIndex": "1000000",
+                    "pointerEvents": "none",
+                }
+            }
+        },
+        {
+            element: "img",
+            attributes: {
+                "id": "waitIsItAllImg",
                 "src": "https://i.imgur.com/OXK2HVT.png",
                 "alt": "It always has been",
                 "style": {
@@ -13,26 +26,29 @@ const memeSpec = {
                     "bottom": "0",
                     "zIndex": "1000000",
                     "pointerEvents": "none",
-                }
+                },
+                parent: "waitIsItAll"
             }
         },
         {
             element: "h2",
             attributes: {
                 "id": "waitIsItAllText",
-                "textContent": "Wait, its all...",
+                "textContent": "Wait, is it all...",
                 "style": {
                     "position": "fixed",
-                    "right": "0",
-                    "bottom": "0",
+                    "right": "400px",
+                    "bottom": "270px",
                     "zIndex": "1000000",
                     "pointerEvents": "none",
                     "color": "white",
                     "fontFamily": "Arial",
                     "fontSize": "2em",
-                    "padding": "1em"
+                    "padding": "1em",
+                    "textShadow": "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000"
                 }
-            }
+            },
+            parent: "waitIsItAll"
         },
         {
             element: "h2",
@@ -41,16 +57,18 @@ const memeSpec = {
                 "textContent": "Always has been",
                 "style": {
                     "position": "fixed",
-                    "right": "0",
-                    "bottom": "0",
+                    "right": "10px",
+                    "bottom": "430px",
                     "zIndex": "1000000",
                     "pointerEvents": "none",
                     "color": "white",
                     "fontFamily": "Arial",
                     "fontSize": "2em",
-                    "padding": "1em"
+                    "padding": "1em",
+                    "textShadow": "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000"
                 }
-            }
+            },
+            parent: "waitIsItAll"
         }
     ]
 }
