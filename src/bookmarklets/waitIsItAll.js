@@ -27,8 +27,8 @@ const memeSpec = {
                     "zIndex": "1000000",
                     "pointerEvents": "none",
                 },
-                parent: "waitIsItAll"
-            }
+            },
+            parent: "waitIsItAll"
         },
         {
             element: "h2",
