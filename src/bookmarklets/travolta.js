@@ -11,9 +11,9 @@ const memeSpec = {
                         "position": "fixed",
                         "right": "10%",
                         "bottom": "0",
-                        "zIndex": "1000000"
+                        "zIndex": "1000000",
                     }
             }
         }
     ]
-};
+}
