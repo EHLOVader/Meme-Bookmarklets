@@ -1,9 +1,9 @@
 const memeSpec = {
-    id: "sweating",
-    elements: [
+    "id": "sweating",
+    "elements": [
         {
-            element: "img",
-            attributes: {
+            "element": "img",
+            "attributes": {
                 "id": "sweating",
                 "src": "https://i.imgur.com/97bT3KJ.png",
                 "alt": "Sweating!",

@@ -1,3 +1,1 @@
-const memeSpec = {
-
-}
+const memeSpec = {}

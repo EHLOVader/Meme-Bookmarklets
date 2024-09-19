@@ -1,9 +1,9 @@
 const memeSpec = {
-    id: "inTheWay",
-    elements: [
+    "id": "inTheWay",
+    "elements": [
         {
-            element: "img",
-            attributes: {
+            "element": "img",
+            "attributes": {
                 "id": "inTheWay",
                 "src": "https://i.imgur.com/vNVEmHZ.png",
                 "alt": "oops!",

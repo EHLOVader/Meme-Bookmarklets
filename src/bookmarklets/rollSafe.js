@@ -1,9 +1,9 @@
 const memeSpec = {
-    id: "rollSafe",
-    elements: [
+    "id": "rollSafe",
+    "elements": [
         {
-            element: "img",
-            attributes: {
+            "element": "img",
+            "attributes": {
                 "id": "rollSafe",
                 "src": "https://i.imgur.com/ugIU1Jy.png",
                 "alt": "Thinking",

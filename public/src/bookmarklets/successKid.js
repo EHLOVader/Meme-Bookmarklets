@@ -1,9 +1,9 @@
 const memeSpec = {
-    id: "successKid",
-    elements: [
+    "id": "successKid",
+    "elements": [
         {
-            element: "img",
-            attributes: {
+            "element": "img",
+            "attributes": {
                 "id": "successKid",
                 "src": "https://i.imgur.com/2foYDrk.png",
                 "alt": "Success!",

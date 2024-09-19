@@ -1,9 +1,9 @@
 const memeSpec = {
-    id: "drakeNo",
-    elements: [
+    "id": "drakeNo",
+    "elements": [
         {
-            element: "img",
-            attributes: {
+            "element": "img",
+            "attributes": {
                 "id": "drakeNo",
                 "src": "https://i.imgur.com/5bjP6RE.png",
                 "alt": "NO!",

@@ -1,9 +1,9 @@
 const memeSpec = {
-    id: "everywhere",
-    elements: [
+    "id": "everywhere",
+    "elements": [
         {
-            element: "img",
-            attributes: {
+            "element": "img",
+            "attributes": {
                 "id": "everywhere",
                 "src": "https://i.imgur.com/JPnOpdk.png",
                 "alt": "Everwhere!",

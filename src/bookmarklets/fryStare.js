@@ -1,9 +1,9 @@
 const memeSpec = {
-    id: "fryStare",
-    elements: [
+    "id": "fryStare",
+    "elements": [
         {
-            element: "img",
-            attributes: {
+            "element": "img",
+            "attributes": {
                 "id": "fryStare",
                 "src": "https://i.imgur.com/kxr9y42.png",
                 "alt": "hmmm!",
@@ -12,7 +12,7 @@ const memeSpec = {
                     "left": "10%",
                     "bottom": "0",
                     "zIndex": "1000000",
-                    "pointerEvents": "none",
+                    "pointerEvents": "none"
                 }
             }
         }

@@ -1,9 +1,9 @@
 const memeSpec = {
-    id: "patrickBateman",
-    elements: [
+    "id": "patrickBateman",
+    "elements": [
         {
-            element: "img",
-            attributes: {
+            "element": "img",
+            "attributes": {
                 "id": "patrickBateman",
                 "src": "https://i.imgur.com/UDXfCNm.png",
                 "alt": "Yeah!",

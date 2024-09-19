@@ -1,22 +1,24 @@
 const memeSpec = {
-    id: "waitIsItAll",
-    elements: [
+    "id": "waitIsItAll",
+    "elements": [
         {
-          element: "div",
-            attributes: {
+            "element": "div",
+            "attributes": {
                 "id": "waitIsItAll",
                 "style": {
                     "position": "fixed",
                     "right": "0",
+                    "left": "0",
+                    "top": "0",
                     "bottom": "0",
                     "zIndex": "1000000",
-                    "pointerEvents": "none",
+                    "pointerEvents": "none"
                 }
             }
         },
         {
-            element: "img",
-            attributes: {
+            "element": "img",
+            "attributes": {
                 "id": "waitIsItAllImg",
                 "src": "https://i.imgur.com/OXK2HVT.png",
                 "alt": "It always has been",
@@ -25,14 +27,14 @@ const memeSpec = {
                     "right": "0",
                     "bottom": "0",
                     "zIndex": "1000000",
-                    "pointerEvents": "none",
-                },
+                    "pointerEvents": "none"
+                }
             },
-            parent: "waitIsItAll"
+            "parent": "waitIsItAll"
         },
         {
-            element: "h2",
-            attributes: {
+            "element": "h2",
+            "attributes": {
                 "id": "waitIsItAllText",
                 "textContent": "Wait, is it all...",
                 "style": {
@@ -48,11 +50,11 @@ const memeSpec = {
                     "textShadow": "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000"
                 }
             },
-            parent: "waitIsItAll"
+            "parent": "waitIsItAll"
         },
         {
-            element: "h2",
-            attributes: {
+            "element": "h2",
+            "attributes": {
                 "id": "waitIsItAllText2",
                 "textContent": "Always has been",
                 "style": {
@@ -68,7 +70,7 @@ const memeSpec = {
                     "textShadow": "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000"
                 }
             },
-            parent: "waitIsItAll"
+            "parent": "waitIsItAll"
         }
     ]
 }
