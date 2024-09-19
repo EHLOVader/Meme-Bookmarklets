@@ -1,7 +1,8 @@
 ---
-
+import '@/styles/global.css'
 //import Soyjak from '../bookmarklets/soyjak.jsx'
-import Bookmarklet from '../components/Bookmarklet.astro'
+//import Bookmarklet from '../components/Bookmarklet.astro'
+import BookmarkletsWithDynamicUrls from '../components/bookmarklets.jsx'
 
 //glob bookmarklets folder and create array of names
 const bookmarklets = ['soyjak', 'travolta', 'wonka'];
@@ -16,7 +17,9 @@ const bookmarklets = ['soyjak', 'travolta', 'wonka'];
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Bookmarklet MEMES</h1>
+
+		<BookmarkletsWithDynamicUrls client:load />
+
 
 		<section>
 			<h2>Memes on any website</h2>
@@ -28,56 +31,6 @@ const bookmarklets = ['soyjak', 'travolta', 'wonka'];
 			<h2>How to use</h2>
 			<p>Drag the bookmarklet to your bookmarks bar and click it on any website to see the memes.</p>
 		</section>
-		<section>
-			<h2>Bookmarklets</h2>
-			<ul>
-				<li>
-					<Bookmarklet src="soyjak">Soy Jak</Bookmarklet>
-				</li>
-				<li>
-					<Bookmarklet src="Travolta">Travolta WTF</Bookmarklet>
-				</li>
-				<li>
-					<Bookmarklet src="wonka">Condescending Wonka</Bookmarklet>
-				</li>
-				<li>
-					<Bookmarklet src="drakeNo">Drake No</Bookmarklet>
-				</li>
-				<li>
-					<Bookmarklet src="drakeYes">Drake Yes</Bookmarklet>
-				</li>
-				<li>
-					<Bookmarklet src="disapointedFan">Disapointed Fan</Bookmarklet>
-				</li>
-				<li>
-					<Bookmarklet src="everywhere"> everywhere </Bookmarklet>
-				</li>
-				<li>
-					<Bookmarklet src="fryStare"> fryStare </Bookmarklet>
-				</li>
-				<li>
-					<Bookmarklet src="fryTakeMyMoney"> fryTakeMyMoney </Bookmarklet>
-				</li>
-				<li>
-					<Bookmarklet src="inTheWay"> inTheWay </Bookmarklet>
-				</li>
-				<li>
-					<Bookmarklet src="patrickBateman"> patrickBateman </Bookmarklet>
-				</li>
-				<li>
-					<Bookmarklet src="rollSafe"> rollSafe </Bookmarklet>
-				</li>
-				<li>
-					<Bookmarklet src="successKid"> successKid </Bookmarklet>
-				</li>
-				<li>
-					<Bookmarklet src="sweating"> sweating </Bookmarklet>
-				</li>
-				<li>
-					<Bookmarklet src="waitIsItAll"> waitIsItAll </Bookmarklet>
-				</li>
-				<li>
-				<Bookmarklet src="womenYellingCat"> womenYellingCat
-		</section>
+
 	</body>
 </html>
