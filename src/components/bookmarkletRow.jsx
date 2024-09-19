@@ -55,16 +55,14 @@ export const BookmarkletRow = ({bookmarklet, index}) => {
 
     const createDemo = (meme) => {
         // parse the javascript string to get the variable that is set in it multiple lines case insensitive
-        const matches = meme.match(/const memeSpec = (.*)(\/\/#.*?)?/is)
-        if(!matches) {
-            return;
-        }
-        console.log(matches[1]);
-        const memeSpec = JSON.parse(matches[1]);
+        const matches = meme.replace('const memeSpec = ', '')
+        const memeSpec = JSON.parse(matches);
+
+        const memeCanvas = document.createElement('div');
+
         memeSpec.elements.forEach(element => {
             const el = document.createElement(element.element);
             const attributes = element.attributes;
-            attributes['id'] = 'demo' + element.attributes.id;
             Object.keys(attributes).forEach(key => {
                 if (key === 'style') {
                     attributes[key].position = 'absolute';
@@ -80,14 +78,14 @@ export const BookmarkletRow = ({bookmarklet, index}) => {
                 };
             }
             if (element.parent) {
-                const parent = document.getElementById('demo' + element.parent);
+                const parent = memeCanvas.querySelector(`#${element.parent}`);
                 parent.appendChild(el);
             } else {
-                // find nearest .browser-pane and append this element to it
-
-                setBookmarkletDemo(el.outerHTML)
+                memeCanvas.appendChild(el);
             }
         });
+
+        setBookmarkletDemo(memeCanvas.innerHTML);
     }
 
     useEffect(() => {
