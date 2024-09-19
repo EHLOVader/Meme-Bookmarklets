@@ -55,7 +55,7 @@ export const BookmarkletRow = ({bookmarklet, index}) => {
 
     const createDemo = (meme) => {
         // parse the javascript string to get the variable that is set in it multiple lines case insensitive
-        const matches = meme.match(/const memeSpec = (.*)\/\/#.*?/is)
+        const matches = meme.match(/const memeSpec = (.*)(\/\/#.*?)?/is)
         if(!matches) {
             return;
         }
