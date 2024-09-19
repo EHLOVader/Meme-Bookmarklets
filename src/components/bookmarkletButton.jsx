@@ -32,7 +32,6 @@ export const BookmarkletButton = ({ name, src }) => {
     return (
         <a
             onClick={handleClick}
-            draggable
             href={bookmarkletCode}
             className="bg-blue-500 text-white m-4 inline-block px-4 py-2 rounded hover:bg-blue-600 transition-colors cursor-move"
         >
