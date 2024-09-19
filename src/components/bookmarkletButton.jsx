@@ -9,10 +9,7 @@ export const BookmarkletButton = ({ name, src }) => {
     useEffect(() => {
         const loadBookmarklet = async () => {
             try {
-                const utilityResponse = await fetch('/src/lib/utility.js')
-                const utilityContent = await utilityResponse.text()
-                const combinedContent = `${src}\n${utilityContent}`
-                const minified = await minify(combinedContent)
+                const minified = await minify(src)
                 setBookmarkletCode(createBookmarklet(minified.code))
             } catch (error) {
                 console.error('Error loading bookmarklet:', error)

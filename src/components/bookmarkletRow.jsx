@@ -64,6 +64,7 @@ export const BookmarkletRow = ({bookmarklet, index}) => {
         memeSpec.elements.forEach(element => {
             const el = document.createElement(element.element);
             const attributes = element.attributes;
+            attributes['id'] = 'demo' + element.attributes.id;
             Object.keys(attributes).forEach(key => {
                 if (key === 'style') {
                     attributes[key].position = 'absolute';
@@ -79,7 +80,7 @@ export const BookmarkletRow = ({bookmarklet, index}) => {
                 };
             }
             if (element.parent) {
-                const parent = document.getElementById(element.parent);
+                const parent = document.getElementById('demo' + element.parent);
                 parent.appendChild(el);
             } else {
                 // find nearest .browser-pane and append this element to it
@@ -122,7 +123,7 @@ export const BookmarkletRow = ({bookmarklet, index}) => {
                     </TabsList>
                     <TabsContent value="install" className="space-y-2">
                         <p className="text-sm font-medium">To install:</p>
-                        <BookmarkletButton name={bookmarklet.name} src={bookmarklet.src}/>
+                        <BookmarkletButton name={bookmarklet.name} src={bookmarkletCode}/>
                         <p className="text-sm text-gray-600">
                             Drag this button to your bookmarks bar. If you can't see the bookmarks bar, use the keyboard
                             shortcut:
