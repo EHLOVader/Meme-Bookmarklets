@@ -9,6 +9,7 @@ import {ArrowRight, BookmarkIcon, ChevronLeft, ChevronRight, Menu, RefreshCcw, S
 import {Input} from "@/components/ui/input";
 
 
+
 const GenericMarketingSite = ({ theme, accent }) => (
     <div className={`space-y-6 ${theme} p-4 rounded-lg`}>
         <header className="flex justify-between items-center">
@@ -50,8 +51,43 @@ const GenericMarketingSite = ({ theme, accent }) => (
 export const BookmarkletRow = ({bookmarklet, index}) => {
 
     const [bookmarkletCode, setBookmarkletCode] = useState('')
+    const [bookmarkletDemo, setBookmarkletDemo] = useState('')
 
-    const codePane = React.createRef()
+    const createDemo = (meme) => {
+        // parse the javascript string to get the variable that is set in it multiple lines case insensitive
+        const matches = meme.match(/const memeSpec = (.*)\/\/#.*?/is)
+        if(!matches) {
+            return;
+        }
+        console.log(matches[1]);
+        const memeSpec = JSON.parse(matches[1]);
+        memeSpec.elements.forEach(element => {
+            const el = document.createElement(element.element);
+            const attributes = element.attributes;
+            Object.keys(attributes).forEach(key => {
+                if (key === 'style') {
+                    attributes[key].position = 'absolute';
+                    Object.assign(el.style, attributes[key]);
+                } else {
+                    el[key] = attributes[key];
+                }
+            });
+            if(element.element === 'img') {
+                el.onerror = function() {
+                    alert('Failed to load the image. It might be blocked due to CORS policy.');
+                    el.remove();
+                };
+            }
+            if (element.parent) {
+                const parent = document.getElementById(element.parent);
+                parent.appendChild(el);
+            } else {
+                // find nearest .browser-pane and append this element to it
+
+                setBookmarkletDemo(el.outerHTML)
+            }
+        });
+    }
 
     useEffect(() => {
         const loadBookmarklet = async () => {
@@ -61,6 +97,8 @@ export const BookmarkletRow = ({bookmarklet, index}) => {
                 const sourceResponse = await fetch(`/src/bookmarklets/${bookmarklet.src}.js`)
                 const sourceContent = await sourceResponse.text()
                 const combinedContent = `${sourceContent}\n${utilityContent}`
+
+                createDemo(sourceContent)
 
                 setBookmarkletCode(combinedContent)
             } catch (error) {
@@ -135,7 +173,8 @@ export const BookmarkletRow = ({bookmarklet, index}) => {
                         {bookmarklet.name}
                     </Button>
                 </div>
-                <div className="bg-white p-4">
+                <div className="browser-pane bg-white p-4 relative">
+                    <div dangerouslySetInnerHTML={{__html: bookmarkletDemo}} className="absolute top-0 left-0 right-0 bottom-0"/>
                     <div className="mb-4">
                         <GenericMarketingSite theme={bookmarklet.siteTheme} accent={bookmarklet.siteAccent}/>
                     </div>
