@@ -98,15 +98,15 @@ const bookmarklets = [
         siteTheme: "bg-purple-50",
         siteAccent: "bg-purple-500"
     },
-    {
-        name: "Women Yelling at Cat",
-        src: "womenYellingCat",
-        description: "Turns any argument on a webpage into a hilarious meme.",
-        effect: "Transforms text into a 'Women Yelling at Cat' meme format.",
-        explanation: "Got two conflicting viewpoints on a page? This bookmarklet turns them into the iconic 'Women Yelling at Cat' meme, adding a touch of internet humor to any online debate.",
-        siteTheme: "bg-pink-50",
-        siteAccent: "bg-pink-500"
-    },
+    // {
+    //     name: "Women Yelling at Cat",
+    //     src: "womenYellingCat",
+    //     description: "Turns any argument on a webpage into a hilarious meme.",
+    //     effect: "Transforms text into a 'Women Yelling at Cat' meme format.",
+    //     explanation: "Got two conflicting viewpoints on a page? This bookmarklet turns them into the iconic 'Women Yelling at Cat' meme, adding a touch of internet humor to any online debate.",
+    //     siteTheme: "bg-pink-50",
+    //     siteAccent: "bg-pink-500"
+    // },
     {
         name: "Buzz Lightyear Everywhere",
         src: "everywhere",
