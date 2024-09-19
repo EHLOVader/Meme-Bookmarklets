@@ -9,6 +9,24 @@ import {BookmarkletRow} from "@/components/bookmarkletRow.jsx";
 
 const bookmarklets = [
     {
+        name: "Soyjak",
+        src: "soyjak",
+        description: "Reacts to webpage content with exaggerated excitement.",
+        effect: "Adds Soyjak reactions to selected elements.",
+        explanation: "Found something online that's way overhyped? This bookmarklet lets you express your ironic excitement with Soyjak reactions, perfect for poking fun at exaggerated enthusiasm on the internet.",
+        siteTheme: "bg-yellow-50",
+        siteAccent: "bg-yellow-500"
+    },
+    {
+        name: "Wait, It's All...?",
+        src: "waitIsItAll",
+        description: "Reveals surprising truths about webpage content.",
+        effect: "Transforms the page into an 'Always Has Been' meme format.",
+        explanation: "Had a sudden realization while browsing? This bookmarklet turns the entire webpage into an 'Wait, it's all...? Always has been.' meme, perfect for those mind-blowing internet moments.",
+        siteTheme: "bg-indigo-50",
+        siteAccent: "bg-indigo-500"
+    },
+    {
         name: "Disappointed Fan",
         src: "disapointedFan",
         description: "Expresses utter disappointment with the current webpage.",
@@ -18,13 +36,22 @@ const bookmarklets = [
         siteAccent: "bg-red-500"
     },
     {
-        name: "Drake No/Yes",
+        name: "Drake No",
         src: "drakeNo",
         description: "Dismisses the current page content and suggests a better alternative.",
         effect: "Adds Drake reaction memes to elements on the page.",
         explanation: "Use this bookmarklet to express your disapproval of the current page content while suggesting a hilarious alternative. It's like having Drake as your personal web content critic.",
         siteTheme: "bg-yellow-50",
         siteAccent: "bg-yellow-500"
+    },
+    {
+        name: "Drake Yes",
+        src: "drakeYes",
+        description: "Approves of the current page content enthusiastically.",
+        effect: "Adds approving Drake reaction memes to elements on the page.",
+        explanation: "Use this bookmarklet to express your approval of the current page content. It's like having Drake give a thumbs up to your favorite web content.",
+        siteTheme: "bg-green-50",
+        siteAccent: "bg-green-500"
     },
     {
         name: "Fry Stare",
@@ -81,15 +108,6 @@ const bookmarklets = [
         siteAccent: "bg-pink-500"
     },
     {
-        name: "Drake Yes",
-        src: "drakeYes",
-        description: "Approves of the current page content enthusiastically.",
-        effect: "Adds approving Drake reaction memes to elements on the page.",
-        explanation: "Use this bookmarklet to express your approval of the current page content. It's like having Drake give a thumbs up to your favorite web content.",
-        siteTheme: "bg-green-50",
-        siteAccent: "bg-green-500"
-    },
-    {
         name: "Buzz Lightyear Everywhere",
         src: "everywhere",
         description: "Points out recurring elements on a webpage.",
@@ -117,15 +135,6 @@ const bookmarklets = [
         siteAccent: "bg-gray-500"
     },
     {
-        name: "Soyjak",
-        src: "soyjak",
-        description: "Reacts to webpage content with exaggerated excitement.",
-        effect: "Adds Soyjak reactions to selected elements.",
-        explanation: "Found something online that's way overhyped? This bookmarklet lets you express your ironic excitement with Soyjak reactions, perfect for poking fun at exaggerated enthusiasm on the internet.",
-        siteTheme: "bg-yellow-50",
-        siteAccent: "bg-yellow-500"
-    },
-    {
         name: "Sweating Towel Guy",
         src: "sweating",
         description: "Expresses anxiety or tension about webpage content.",
@@ -133,15 +142,6 @@ const bookmarklets = [
         explanation: "When a webpage makes you nervous or presents a tough decision, let the 'Sweating Towel Guy' express your anxiety. This bookmarklet adds a touch of tension to any online content.",
         siteTheme: "bg-blue-50",
         siteAccent: "bg-blue-500"
-    },
-    {
-        name: "Wait, It's All...?",
-        src: "waitIsItAll",
-        description: "Reveals surprising truths about webpage content.",
-        effect: "Transforms the page into an 'Always Has Been' meme format.",
-        explanation: "Had a sudden realization while browsing? This bookmarklet turns the entire webpage into an 'Wait, it's all...? Always has been.' meme, perfect for those mind-blowing internet moments.",
-        siteTheme: "bg-indigo-50",
-        siteAccent: "bg-indigo-500"
     },
     {
         name: "Condescending Wonka",
@@ -153,7 +153,6 @@ const bookmarklets = [
         siteAccent: "bg-purple-500"
     }
 ]
-
 const GenericMarketingSite = ({ theme, accent }) => (
     <div className={`space-y-6 ${theme} p-4 rounded-lg`}>
         <header className="flex justify-between items-center">
