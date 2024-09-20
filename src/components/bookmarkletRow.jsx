@@ -141,7 +141,7 @@ export const BookmarkletRow = ({bookmarklet, index}) => {
                     </TabsContent>
                 </Tabs>
             </div>
-            <Card className="w-full lg:w-2/3 overflow-hidden shadow-lg">
+            <Card className="w-full lg:w-2/3 overflow-hidden shadow-lg browser">
                 <div className="bg-gray-200 p-2 flex items-center gap-2">
                     <Menu className="text-gray-500" size={16}/>
                     <Tabs defaultValue="tab1" className="w-full">
@@ -168,13 +168,14 @@ export const BookmarkletRow = ({bookmarklet, index}) => {
                     <Button
                         variant="ghost"
                         className="h-6 px-2 text-xs font-normal text-blue-600 hover:text-blue-800 hover:bg-blue-50"
+                        onClick={(event) => event.currentTarget.closest('.browser').querySelector('.meme').classList.toggle('hidden')}
                     >
                         {bookmarklet.name}
                     </Button>
                 </div>
                 <div className="browser-pane bg-white p-4 relative">
-                    <div dangerouslySetInnerHTML={{__html: bookmarkletDemo}} className="absolute top-0 left-0 right-0 bottom-0"/>
-                    <div className="mb-4">
+                    <div dangerouslySetInnerHTML={{__html: bookmarkletDemo}} className="meme absolute top-0 left-0 right-0 bottom-0"/>
+                    <div className=" mb-4">
                         <GenericMarketingSite theme={bookmarklet.siteTheme} accent={bookmarklet.siteAccent}/>
                     </div>
                     <div className="bg-yellow-100 p-4 rounded-md border border-yellow-200">
