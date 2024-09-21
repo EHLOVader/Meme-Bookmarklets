@@ -5,7 +5,7 @@ const memeSpec = {
             "element": "img",
             "attributes": {
                 "id": "fryTakeMyMoney",
-                "src": "https://i.imgur.com/H08ZJdZ.png",
+                "src": "https://i.imgur.com/Pn2F2Qm.png",
                 "alt": "Shut up and take my money!",
                 "style": {
                     "position": "fixed",

@@ -5,7 +5,7 @@ const memeSpec = {
             "element": "img",
             "attributes": {
                 "id": "condenscendingWonka",
-                "src": "https://i.imgur.com/BZzFFe9.png",
+                "src": "https://i.imgur.com/6wu6KKH.png",
                 "alt": "WTF!",
                 "style": {
                     "position": "fixed",
