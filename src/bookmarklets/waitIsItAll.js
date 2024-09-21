@@ -20,7 +20,7 @@ const memeSpec = {
             "element": "img",
             "attributes": {
                 "id": "waitIsItAllImg",
-                "src": "https://i.imgur.com/OXK2HVT.png",
+                "src": "https://i.imgur.com/sZ0efyn.png",
                 "alt": "It always has been",
                 "style": {
                     "position": "fixed",
