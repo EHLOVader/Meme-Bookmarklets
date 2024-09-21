@@ -10,7 +10,5 @@ export default defineConfig({
       {
         applyBaseStyles: false,
       }
-  )],
-    site: 'https://ehlovader.com',
-    base: '/Meme-Bookmarklets/',
+  )]
 });

@@ -91,9 +91,9 @@ export const BookmarkletRow = ({bookmarklet, index}) => {
     useEffect(() => {
         const loadBookmarklet = async () => {
             try {
-                const utilityResponse = await fetch('/Meme-Bookmarklets/src/lib/utility.js')
+                const utilityResponse = await fetch('/src/lib/utility.js')
                 const utilityContent = await utilityResponse.text()
-                const sourceResponse = await fetch(`/Meme-Bookmarklets/src/bookmarklets/${bookmarklet.src}.js`)
+                const sourceResponse = await fetch(`/src/bookmarklets/${bookmarklet.src}.js`)
                 const sourceContent = await sourceResponse.text()
                 const combinedContent = `${sourceContent}\n${utilityContent}`
 
