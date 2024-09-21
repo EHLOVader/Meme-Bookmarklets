@@ -5,7 +5,7 @@ const memeSpec = {
             "element": "img",
             "attributes": {
                 "id": "rollSafe",
-                "src": "https://i.imgur.com/ugIU1Jy.png",
+                "src": "https://i.imgur.com/Gbvq9Qv.png",
                 "alt": "Thinking",
                 "style": {
                     "position": "fixed",
