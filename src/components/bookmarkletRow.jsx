@@ -125,10 +125,10 @@ export const BookmarkletRow = ({bookmarklet, index}) => {
                         <p className="text-sm text-gray-600">
                             Drag this button to your bookmarks bar. If you can't see the bookmarks bar, use the keyboard
                             shortcut:
-                            <br/>
-                            • Windows/Linux: Ctrl + Shift + B
-                            <br/>
-                            • Mac: Command + Shift + B
+                            <ul className="list-disc list-inside">
+                                <li>Windows/Linux: Ctrl + Shift + B</li>
+                                <li>Mac: Command + Shift + B</li>
+                            </ul>
                         </p>
                     </TabsContent>
                     <TabsContent value="code">
@@ -174,13 +174,15 @@ export const BookmarkletRow = ({bookmarklet, index}) => {
                     </Button>
                 </div>
                 <div className="browser-pane bg-white p-4 relative">
-                    <div dangerouslySetInnerHTML={{__html: bookmarkletDemo}} className="meme absolute top-0 left-0 right-0 bottom-0"/>
-                    <div className=" mb-4">
-                        <GenericMarketingSite theme={bookmarklet.siteTheme} accent={bookmarklet.siteAccent}/>
-                    </div>
-                    <div className="bg-yellow-100 p-4 rounded-md border border-yellow-200">
-                        <h3 className="text-sm font-semibold mb-2">Bookmarklet Effect:</h3>
-                        <p className="text-sm">{bookmarklet.effect}</p>
+                    <div dangerouslySetInnerHTML={{__html: bookmarkletDemo}} className="meme absolute top-0 left-0 right-0 bottom-0 pointer-events-none"/>
+                    <div className="overflow-y-scroll h-full">
+                        <div className="mb-4">
+                            <GenericMarketingSite theme={bookmarklet.siteTheme} accent={bookmarklet.siteAccent}/>
+                        </div>
+                        <div className="bg-yellow-100 p-4 rounded-md border border-yellow-200">
+                            <h3 className="text-sm font-semibold mb-2">Bookmarklet Effect:</h3>
+                            <p className="text-sm">{bookmarklet.effect}</p>
+                        </div>
                     </div>
                 </div>
             </Card>
