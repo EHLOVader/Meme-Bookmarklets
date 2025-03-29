@@ -10,6 +10,7 @@ import {BookmarkletRow} from "@/components/bookmarkletRow.jsx";
 const bookmarklets = [
     {
         name: "Soyjak",
+        buttonLabel: "Ö `Ö Soyjak",
         src: "soyjak",
         description: "Reacts to webpage content with exaggerated excitement.",
         effect: "Adds Soyjak reactions to selected elements.",
@@ -19,6 +20,7 @@ const bookmarklets = [
     },
     {
         name: "Wait, It's All...?",
+        buttonLabel: "🌎👨‍🚀🔫👨‍🚀 Wait, It's All...?",
         src: "waitIsItAll",
         description: "Reveals surprising truths about webpage content.",
         effect: "Transforms the page into an 'Always Has Been' meme format.",
@@ -28,6 +30,7 @@ const bookmarklets = [
     },
     {
         name: "Disappointed Fan",
+        buttonLabel: "😞Disappointed Fan",
         src: "disapointedFan",
         description: "Expresses utter disappointment with the current webpage.",
         effect: "Overlays a disappointed fan reaction on the page.",
@@ -37,6 +40,7 @@ const bookmarklets = [
     },
     {
         name: "Drake No",
+        buttonLabel: "🚫 Drake No",
         src: "drakeNo",
         description: "Dismisses the current page content and suggests a better alternative.",
         effect: "Adds Drake reaction memes to elements on the page.",
@@ -46,6 +50,7 @@ const bookmarklets = [
     },
     {
         name: "Drake Yes",
+        buttonLabel: "✅ Drake Yes",
         src: "drakeYes",
         description: "Approves of the current page content enthusiastically.",
         effect: "Adds approving Drake reaction memes to elements on the page.",
@@ -55,6 +60,7 @@ const bookmarklets = [
     },
     {
         name: "Fry Stare",
+        buttonLabel: "-_- Fry Stare",
         src: "fryStare",
         description: "Adds a suspicious Fry stare to questionable content.",
         effect: "Overlays Fry's squinting face on selected elements.",
@@ -64,6 +70,7 @@ const bookmarklets = [
     },
     {
         name: "In The Way",
+        buttonLabel: "📸 In The Way",
         src: "inTheWay",
         description: "Adds a photobombing tourist to your webpage.",
         effect: "Inserts the 'In The Way Guy' meme into images on the page.",
@@ -73,6 +80,7 @@ const bookmarklets = [
     },
     {
         name: "Roll Safe",
+        buttonLabel: "👉🧠💡 Roll Safe",
         src: "rollSafe",
         description: "Adds witty, yet questionable advice to any webpage.",
         effect: "Inserts 'Roll Safe' meme captions to selected text.",
@@ -82,6 +90,7 @@ const bookmarklets = [
     },
     {
         name: "Success Kid",
+        buttonLabel: "💪 Success Kid",
         src: "successKid",
         description: "Celebrates small victories on any webpage.",
         effect: "Adds 'Success Kid' reactions to positive content.",
@@ -91,6 +100,7 @@ const bookmarklets = [
     },
     {
         name: "Confused Travolta",
+        buttonLabel: "🕴️ Confused Travolta",
         src: "travolta",
         description: "Expresses confusion about the webpage's content.",
         effect: "Inserts a confused John Travolta gif into the page.",
@@ -100,6 +110,7 @@ const bookmarklets = [
     },
     // {
     //     name: "Women Yelling at Cat",
+    //     buttonLabel: "Women Yelling at Cat",
     //     src: "womenYellingCat",
     //     description: "Turns any argument on a webpage into a hilarious meme.",
     //     effect: "Transforms text into a 'Women Yelling at Cat' meme format.",
@@ -109,6 +120,7 @@ const bookmarklets = [
     // },
     {
         name: "Buzz Lightyear Everywhere",
+        buttonLabel: "🤠👨‍🚀🌎Buzz Lightyear Everywhere",
         src: "everywhere",
         description: "Points out recurring elements on a webpage.",
         effect: "Adds 'X, X Everywhere' captions to repeated content.",
@@ -118,6 +130,7 @@ const bookmarklets = [
     },
     {
         name: "Fry Take My Money",
+        buttonLabel: "💁💸 Fry Take My Money",
         src: "fryTakeMyMoney",
         description: "Expresses extreme willingness to pay for something on the page.",
         effect: "Overlays Fry's 'Shut up and take my money!' meme on product images.",
@@ -127,6 +140,7 @@ const bookmarklets = [
     },
     {
         name: "Patrick Bateman",
+        buttonLabel: "💁‍🪓️Patrick Bateman",
         src: "patrickBateman",
         description: "Adds a touch of American Psycho to any webpage.",
         effect: "Inserts Patrick Bateman reactions to selected content.",
@@ -136,6 +150,7 @@ const bookmarklets = [
     },
     {
         name: "Sweating Towel Guy",
+        buttonLabel: "😰 Sweating Towel Guy",
         src: "sweating",
         description: "Expresses anxiety or tension about webpage content.",
         effect: "Adds the 'Sweating Towel Guy' meme to stressful content.",
@@ -145,6 +160,7 @@ const bookmarklets = [
     },
     {
         name: "Condescending Wonka",
+        buttonLabel: "🍫 Condescending Wonka",
         src: "wonka",
         description: "Adds sarcastic Wonka comments to webpage content.",
         effect: "Inserts condescending Wonka captions to selected text.",
@@ -153,52 +169,19 @@ const bookmarklets = [
         siteAccent: "bg-purple-500"
     }
 ]
-const GenericMarketingSite = ({ theme, accent }) => (
-    <div className={`space-y-6 ${theme} p-4 rounded-lg`}>
-        <header className="flex justify-between items-center">
-            <div className="font-bold text-xl">Acme Innovations</div>
-            <nav className="space-x-4">
-                <a href="#" className="text-sm hover:underline">Products</a>
-                <a href="#" className="text-sm hover:underline">About</a>
-                <a href="#" className="text-sm hover:underline">Contact</a>
-            </nav>
-        </header>
-        <main className="space-y-6">
-            <section className={`${accent} text-white p-6 rounded-lg`}>
-                <h1 className="text-3xl font-bold mb-4">Revolutionize Your Life with Our Groundbreaking Solutions!</h1>
-                <p className="mb-4">Are you tired of being productive? Sick of getting things done efficiently? Look no further! Our cutting-edge products are guaranteed to complicate your life in ways you never imagined possible.</p>
-                <Button variant="secondary">Embrace Chaos Now <ArrowRight className="ml-2 h-4 w-4" /></Button>
-            </section>
-            <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="bg-white p-4 rounded-lg shadow">
-                    <h2 className="font-semibold mb-2">Procrastination Pro</h2>
-                    <p className="text-sm">Why do today what you can put off until tomorrow? Our AI-powered excuse generator has got you covered!</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow">
-                    <h2 className="font-semibold mb-2">Confusion Enhancer</h2>
-                    <p className="text-sm">Clarity is overrated. Let our patented algorithm turn your simple ideas into incomprehensible jargon!</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow">
-                    <h2 className="font-semibold mb-2">Meetings Maximizer</h2>
-                    <p className="text-sm">Because there's no such thing as too many meetings. Now with integrated coffee spillage predictions!</p>
-                </div>
-            </section>
-        </main>
-        <footer className="text-center text-sm text-gray-500">
-            © 2023 Acme Innovations. All wrongs reserved. No refunds, no returns, no regrets (maybe).
-        </footer>
-    </div>
-)
 
 export default function BookmarkletsWithDynamicUrls() {
     return (
-        <div className="container mx-auto p-4 bg-gray-100 min-h-screen">
-            <h1 className="text-2xl font-bold mb-6 text-center">Bookmarklets Showcase</h1>
-            <div className="space-y-12">
+        <>
+        <section>
+            <h2 className="text-2xl font-bold mb-6 ">Bookmarklets Showcase</h2>
+            <p>Browse the selection of bookmarklets below and find your favorites. Then, follow the simple steps on the left to add them to your bookmarks bar, so you can use them anytime with just a click!</p>
+        </section>
+        <div className="container mx-auto p-4 min-h-screen space-y-12 mt-8">
                 {bookmarklets.map((bookmarklet, index) => (
                     <BookmarkletRow bookmarklet={bookmarklet} index={index}/>
                 ))}
-            </div>
         </div>
+        </>
     )
 }

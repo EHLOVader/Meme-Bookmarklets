@@ -121,7 +121,7 @@ export const BookmarkletRow = ({bookmarklet, index}) => {
                     </TabsList>
                     <TabsContent value="install" className="space-y-2">
                         <p className="text-sm font-medium">To install:</p>
-                        <BookmarkletButton name={bookmarklet.name} src={bookmarkletCode}/>
+                        <BookmarkletButton name={bookmarklet.buttonLabel} src={bookmarkletCode}/>
                         <p className="text-sm text-gray-600">
                             Drag this button to your bookmarks bar. If you can't see the bookmarks bar, use the keyboard
                             shortcut:
@@ -170,7 +170,7 @@ export const BookmarkletRow = ({bookmarklet, index}) => {
                         className="h-6 px-2 text-xs font-normal text-blue-600 hover:text-blue-800 hover:bg-blue-50"
                         onClick={(event) => event.currentTarget.closest('.browser').querySelector('.meme').classList.toggle('hidden')}
                     >
-                        {bookmarklet.name}
+                        {bookmarklet.buttonLabel}
                     </Button>
                 </div>
                 <div className="browser-pane bg-white p-4 relative">
