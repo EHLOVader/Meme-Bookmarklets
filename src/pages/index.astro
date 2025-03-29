@@ -3,6 +3,7 @@ import '@/styles/global.css'
 //import Soyjak from '../bookmarklets/soyjak.jsx'
 //import Bookmarklet from '../components/Bookmarklet.astro'
 import BookmarkletsWithDynamicUrls from '../components/bookmarklets.jsx'
+import React from "react";
 
 //glob bookmarklets folder and create array of names
 const bookmarklets = ['soyjak', 'travolta', 'wonka'];
@@ -18,19 +19,22 @@ const bookmarklets = ['soyjak', 'travolta', 'wonka'];
 	</head>
 	<body>
 
+		<h1 class="site-header"><span class="bookmarklet">Bookmarklet</span> <span class="meme">. Meme</span></h1>
+
+
+		<section>
+			<h2 class="text-2xl font-bold mb-6">Memes on any website</h2>
+			<p>Now you can instantly react to any website’s design or content with the most iconic memes from the internet &mdash; right from your browser. With just a click from your bookmarks bar, you can drop the perfect reaction onto any page, whether it’s a confusing layout, a hilarious typo, or just something that deserves a meme-worthy response. No extensions, no hassle &mdash; just pure meme magic at your fingertips. </p>
+
+		</section>
+
+		<section>
+			<h2 class="text-2xl font-bold mb-6 ">How to use</h2>
+			<p>Drag the bookmarklet button to your bookmarks bar. Once installed there you can click it from any website to add the meme over the website content.
+				No installation, no extensions &mdash; just click and enjoy the reaction wherever you browse.</p>
+		</section>
+
 		<BookmarkletsWithDynamicUrls client:load />
-
-
-		<section>
-			<h2>Memes on any website</h2>
-			<p>React to any site design or content with the best memes from the internet.</p>
-
-		</section>
-
-		<section>
-			<h2>How to use</h2>
-			<p>Drag the bookmarklet to your bookmarks bar and click it on any website to see the memes.</p>
-		</section>
 
 	</body>
 </html>
