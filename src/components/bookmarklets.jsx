@@ -140,7 +140,7 @@ const bookmarklets = [
     },
     {
         name: "Patrick Bateman",
-        buttonLabel: "💁‍🪓️Patrick Bateman",
+        buttonLabel: "🪓💁🎶‍️Patrick Bateman",
         src: "patrickBateman",
         description: "Adds a touch of American Psycho to any webpage.",
         effect: "Inserts Patrick Bateman reactions to selected content.",
