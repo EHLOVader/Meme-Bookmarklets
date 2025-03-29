@@ -24,7 +24,7 @@ export const BookmarkletButton = ({ name, src }) => {
         if (bookmarkletCode) {
             // copy to clipboard
             navigator.clipboard.writeText(bookmarkletCode);
-            alert('Bookmarklet is loaded. Drag the button to your bookmarks bar to use it. Or a copy of the bookmarklet code is in your clipboard to save on mobile')
+            alert('Bookmarklet has been copied. Paste the bookmarklet code from your clipboard to save on mobile. Or drag the button to your bookmarks bar to use it.')
         } else {
             alert('Bookmarklet is not loaded yet. Please try again in a moment.')
         }
